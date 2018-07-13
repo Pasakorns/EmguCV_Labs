@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblMValue = new System.Windows.Forms.Label();
             this.lblMSize = new System.Windows.Forms.Label();
@@ -47,12 +46,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSample1 = new System.Windows.Forms.Button();
             this.btnSample2 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbrMValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbrMSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbaThreshold)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboGray)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboColor)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -65,15 +66,6 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "->";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(373, 302);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 13);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Threshold Type";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblMValue);
@@ -84,7 +76,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cboAdapEn);
-            this.groupBox1.Location = new System.Drawing.Point(12, 293);
+            this.groupBox1.Location = new System.Drawing.Point(376, 296);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(330, 142);
             this.groupBox1.TabIndex = 15;
@@ -179,7 +171,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(376, 318);
+            this.comboBox1.Location = new System.Drawing.Point(11, 29);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 14;
@@ -197,10 +189,10 @@
             // 
             // tbaThreshold
             // 
-            this.tbaThreshold.Location = new System.Drawing.Point(376, 374);
+            this.tbaThreshold.Location = new System.Drawing.Point(11, 78);
             this.tbaThreshold.Maximum = 255;
             this.tbaThreshold.Name = "tbaThreshold";
-            this.tbaThreshold.Size = new System.Drawing.Size(277, 45);
+            this.tbaThreshold.Size = new System.Drawing.Size(268, 45);
             this.tbaThreshold.TabIndex = 12;
             this.tbaThreshold.TickFrequency = 32;
             this.tbaThreshold.Value = 100;
@@ -231,7 +223,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(670, 374);
+            this.label1.Location = new System.Drawing.Point(289, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 15);
             this.label1.TabIndex = 18;
@@ -239,9 +231,9 @@
             // 
             // btnSample1
             // 
-            this.btnSample1.Location = new System.Drawing.Point(108, 10);
+            this.btnSample1.Location = new System.Drawing.Point(170, 10);
             this.btnSample1.Name = "btnSample1";
-            this.btnSample1.Size = new System.Drawing.Size(86, 23);
+            this.btnSample1.Size = new System.Drawing.Size(80, 23);
             this.btnSample1.TabIndex = 19;
             this.btnSample1.Text = "Img sample01";
             this.btnSample1.UseVisualStyleBackColor = true;
@@ -249,30 +241,40 @@
             // 
             // btnSample2
             // 
-            this.btnSample2.Location = new System.Drawing.Point(201, 10);
+            this.btnSample2.Location = new System.Drawing.Point(262, 10);
             this.btnSample2.Name = "btnSample2";
-            this.btnSample2.Size = new System.Drawing.Size(86, 23);
+            this.btnSample2.Size = new System.Drawing.Size(80, 23);
             this.btnSample2.TabIndex = 20;
             this.btnSample2.Text = "Img sample02";
             this.btnSample2.UseVisualStyleBackColor = true;
             this.btnSample2.Click += new System.EventHandler(this.btnSample2_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.tbaThreshold);
+            this.groupBox2.Location = new System.Drawing.Point(13, 297);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(329, 141);
+            this.groupBox2.TabIndex = 21;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Global Threshold";
             // 
             // Lab02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 450);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnSample2);
             this.Controls.Add(this.btnSample1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.tbaThreshold);
             this.Controls.Add(this.pboGray);
             this.Controls.Add(this.pboColor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Lab02";
             this.Text = "Lab 02 : Image Binarize";
             this.Load += new System.EventHandler(this.Lab02_Load);
@@ -283,6 +285,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbaThreshold)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboGray)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboColor)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,7 +295,6 @@
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblMValue;
         private System.Windows.Forms.Label lblMSize;
@@ -309,5 +312,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSample1;
         private System.Windows.Forms.Button btnSample2;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

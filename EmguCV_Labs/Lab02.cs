@@ -159,7 +159,6 @@ namespace EmguCV_Labs
                     return;
                 }
 
-
                 pboGray.Image = binImg.ToBitmap(pboGray.Width, pboGray.Height);
             }
         }

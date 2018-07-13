@@ -110,6 +110,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pboPictureBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Lab01";
             this.Text = "Lab 01 : Open Image";
             this.Load += new System.EventHandler(this.Lab01_Load);
