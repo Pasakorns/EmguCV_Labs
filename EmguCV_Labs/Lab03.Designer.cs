@@ -1,6 +1,6 @@
 ﻿namespace EmguCV_Labs
 {
-    partial class Form1
+    partial class Lab03
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Lab03
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Name = "Lab03";
+            this.Text = "Lab 03 : Histrogram";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
