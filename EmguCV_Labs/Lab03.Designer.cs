@@ -44,7 +44,7 @@
             // 
             this.panAndZoomPictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.panAndZoomPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panAndZoomPictureBox1.Location = new System.Drawing.Point(24, 58);
+            this.panAndZoomPictureBox1.Location = new System.Drawing.Point(24, 50);
             this.panAndZoomPictureBox1.Name = "panAndZoomPictureBox1";
             this.panAndZoomPictureBox1.Size = new System.Drawing.Size(400, 300);
             this.panAndZoomPictureBox1.TabIndex = 0;
@@ -52,9 +52,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(24, 18);
+            this.button1.Location = new System.Drawing.Point(24, 10);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 34);
             this.button1.TabIndex = 1;
             this.button1.Text = "Load Img";
             this.button1.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@
             // htgRed
             // 
             this.htgRed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.htgRed.Location = new System.Drawing.Point(430, 18);
+            this.htgRed.Location = new System.Drawing.Point(430, 10);
             this.htgRed.Name = "htgRed";
             this.htgRed.Size = new System.Drawing.Size(358, 110);
             this.htgRed.TabIndex = 2;
@@ -71,7 +71,7 @@
             // htgGreen
             // 
             this.htgGreen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.htgGreen.Location = new System.Drawing.Point(430, 132);
+            this.htgGreen.Location = new System.Drawing.Point(430, 124);
             this.htgGreen.Name = "htgGreen";
             this.htgGreen.Size = new System.Drawing.Size(358, 110);
             this.htgGreen.TabIndex = 3;
@@ -79,7 +79,7 @@
             // htgBlue
             // 
             this.htgBlue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.htgBlue.Location = new System.Drawing.Point(430, 248);
+            this.htgBlue.Location = new System.Drawing.Point(430, 240);
             this.htgBlue.Name = "htgBlue";
             this.htgBlue.Size = new System.Drawing.Size(358, 110);
             this.htgBlue.TabIndex = 4;
@@ -87,7 +87,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(433, 23);
+            this.label1.Location = new System.Drawing.Point(433, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 5;
@@ -96,7 +96,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(433, 137);
+            this.label2.Location = new System.Drawing.Point(433, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 6;
@@ -105,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(433, 252);
+            this.label3.Location = new System.Drawing.Point(433, 244);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 7;
@@ -113,7 +113,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(222, 12);
+            this.button2.Location = new System.Drawing.Point(349, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 34);
             this.button2.TabIndex = 8;
@@ -125,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 383);
+            this.ClientSize = new System.Drawing.Size(814, 360);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -135,6 +135,7 @@
             this.Controls.Add(this.htgRed);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panAndZoomPictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Lab03";
             this.Text = "Lab 03 : Histrogram";
             this.Load += new System.EventHandler(this.Lab03_Load);
