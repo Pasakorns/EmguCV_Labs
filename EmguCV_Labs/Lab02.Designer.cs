@@ -45,6 +45,8 @@
             this.pboGray = new System.Windows.Forms.PictureBox();
             this.pboColor = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSample1 = new System.Windows.Forms.Button();
+            this.btnSample2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbrMValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbrMSize)).BeginInit();
@@ -235,11 +237,33 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "100";
             // 
+            // btnSample1
+            // 
+            this.btnSample1.Location = new System.Drawing.Point(108, 10);
+            this.btnSample1.Name = "btnSample1";
+            this.btnSample1.Size = new System.Drawing.Size(86, 23);
+            this.btnSample1.TabIndex = 19;
+            this.btnSample1.Text = "Img sample01";
+            this.btnSample1.UseVisualStyleBackColor = true;
+            this.btnSample1.Click += new System.EventHandler(this.btnSample1_Click);
+            // 
+            // btnSample2
+            // 
+            this.btnSample2.Location = new System.Drawing.Point(201, 10);
+            this.btnSample2.Name = "btnSample2";
+            this.btnSample2.Size = new System.Drawing.Size(86, 23);
+            this.btnSample2.TabIndex = 20;
+            this.btnSample2.Text = "Img sample02";
+            this.btnSample2.UseVisualStyleBackColor = true;
+            this.btnSample2.Click += new System.EventHandler(this.btnSample2_Click);
+            // 
             // Lab02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 450);
+            this.Controls.Add(this.btnSample2);
+            this.Controls.Add(this.btnSample1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -283,5 +307,7 @@
         private System.Windows.Forms.PictureBox pboGray;
         private System.Windows.Forms.PictureBox pboColor;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSample1;
+        private System.Windows.Forms.Button btnSample2;
     }
 }

@@ -94,6 +94,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="cvextern.lib">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -124,6 +125,8 @@
     <Content Include="opencv_ffmpeg341_64.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\gray-circle.jpg" />
+    <None Include="Resources\gray-linear.jpg" />
     <Content Include="vcruntime140.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

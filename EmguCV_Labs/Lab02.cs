@@ -70,6 +70,30 @@ namespace EmguCV_Labs
             }
         }
 
+        private void btnSample1_Click(object sender, EventArgs e)
+        {
+            inputImg = new Image<Bgr, byte>(Properties.Resources.gray_linear);
+            grayImg = inputImg.Convert<Gray, Byte>();
+            binImg = new Image<Gray, byte>(grayImg.Width, grayImg.Height, new Gray(0));
+
+            pboColor.Image = inputImg.ToBitmap(pboColor.Width, pboColor.Height);
+            pboGray.Image = binImg.ToBitmap(pboGray.Width, pboGray.Height);
+
+            ImageThreshold();
+        }
+
+        private void btnSample2_Click(object sender, EventArgs e)
+        {
+            inputImg = new Image<Bgr, byte>(Properties.Resources.gray_circle);
+            grayImg = inputImg.Convert<Gray, Byte>();
+            binImg = new Image<Gray, byte>(grayImg.Width, grayImg.Height, new Gray(0));
+
+            pboColor.Image = inputImg.ToBitmap(pboColor.Width, pboColor.Height);
+            pboGray.Image = binImg.ToBitmap(pboGray.Width, pboGray.Height);
+
+            ImageThreshold();
+        }
+
         private void tbaThreshold_Scroll(object sender, EventArgs e)
         {
             th = tbaThreshold.Value;
