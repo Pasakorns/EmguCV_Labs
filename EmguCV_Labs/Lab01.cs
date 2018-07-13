@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Emgu.CV;
+using Emgu.CV.Structure;
 
 namespace EmguCV_Labs
 {
@@ -33,6 +35,36 @@ namespace EmguCV_Labs
         private void Lab01_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            DialogResult result = openFile.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                Image<Bgr, Byte> image = new Image<Bgr, byte>(openFile.FileName); // instance of your image
+
+                iboImageBox.Image = image;
+                iboImageBox.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Everything; //Enable/Disable functions of ImageBox
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            DialogResult result = openFile.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                Mat img = CvInvoke.Imread(openFile.FileName, Emgu.CV.CvEnum.ImreadModes.AnyColor); // instance of your image
+                pboPictureBox.Image = img.Bitmap;
+
+                /// or
+                // Image<Bgr, Byte> image = new Image<Bgr, byte>(openFile.FileName);
+                // pboPictureBox.Image = image.ToBitmap();
+            }
         }
     }
 }
