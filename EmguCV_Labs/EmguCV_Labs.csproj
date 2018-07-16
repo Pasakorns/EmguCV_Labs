@@ -69,6 +69,30 @@
     <Compile Include="Lab03.Designer.cs">
       <DependentUpon>Lab03.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lab04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab04.Designer.cs">
+      <DependentUpon>Lab04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab04_canny.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab04_canny.Designer.cs">
+      <DependentUpon>Lab04_canny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab04_laplaciant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab04_laplaciant.Designer.cs">
+      <DependentUpon>Lab04_laplaciant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab04_sobel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab04_sobel.Designer.cs">
+      <DependentUpon>Lab04_sobel.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +109,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lab03.resx">
       <DependentUpon>Lab03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab04.resx">
+      <DependentUpon>Lab04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab04_canny.resx">
+      <DependentUpon>Lab04_canny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab04_laplaciant.resx">
+      <DependentUpon>Lab04_laplaciant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab04_sobel.resx">
+      <DependentUpon>Lab04_sobel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

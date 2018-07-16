@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Emgu.CV;
 using Emgu.CV.Structure;
@@ -56,6 +50,7 @@ namespace EmguCV_Labs
         {
             if (imageRGB != null)
             {
+                //////////////////////////////////////////////////////////////////
                 DenseHistogram histRed = new DenseHistogram(256, new RangeF(0, 255));
                 DenseHistogram histGrn = new DenseHistogram(256, new RangeF(0, 255));
                 DenseHistogram histBlu = new DenseHistogram(256, new RangeF(0, 255));
@@ -73,13 +68,28 @@ namespace EmguCV_Labs
 
                 histGrn.CopyTo(histBuffer);
                 htgGreen.ClearHistogram();
-                htgGreen.AddHistogram("Red Histrogram", Color.Green, histBuffer, 256, new float[] { 0, 256 });
+                htgGreen.AddHistogram("Green Histrogram", Color.Green, histBuffer, 256, new float[] { 0, 256 });
                 htgGreen.Refresh();
 
                 histBlu.CopyTo(histBuffer);
                 htgBlue.ClearHistogram();
-                htgBlue.AddHistogram("Red Histrogram", Color.Blue, histBuffer, 256, new float[] { 0, 256 });
+                htgBlue.AddHistogram("Blue Histrogram", Color.Blue, histBuffer, 256, new float[] { 0, 256 });
                 htgBlue.Refresh();
+                ////////////////////////////////////////////////////////////////////
+                // or
+                ////////////////////////////////////////////////////////////////////
+                //htgRed.ClearHistogram();
+                //htgRed.GenerateHistograms(imageRGB[2], 256);
+                //htgRed.Refresh();
+
+                //htgGreen.ClearHistogram();
+                //htgGreen.GenerateHistograms(imageRGB[1], 256);
+                //htgGreen.Refresh();
+
+                //htgBlue.ClearHistogram();
+                //htgBlue.GenerateHistograms(imageRGB[0], 256);
+                //htgBlue.Refresh();
+                ////////////////////////////////////////////////////////////////////
             }
             else
             {
