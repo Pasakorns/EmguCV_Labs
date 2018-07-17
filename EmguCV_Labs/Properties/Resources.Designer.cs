@@ -63,6 +63,16 @@ namespace EmguCV_Labs.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap folder_icon {
+            get {
+                object obj = ResourceManager.GetObject("folder_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gray_circle {
             get {
                 object obj = ResourceManager.GetObject("gray-circle", resourceCulture);
@@ -76,6 +86,16 @@ namespace EmguCV_Labs.Properties {
         internal static System.Drawing.Bitmap gray_linear {
             get {
                 object obj = ResourceManager.GetObject("gray-linear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap webcam_icon {
+            get {
+                object obj = ResourceManager.GetObject("webcam_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
