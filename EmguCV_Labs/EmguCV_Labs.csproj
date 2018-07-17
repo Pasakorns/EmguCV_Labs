@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -93,6 +94,24 @@
     <Compile Include="Lab04_sobel.Designer.cs">
       <DependentUpon>Lab04_sobel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lab05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab05.Designer.cs">
+      <DependentUpon>Lab05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab06.Designer.cs">
+      <DependentUpon>Lab06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab07.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab07.Designer.cs">
+      <DependentUpon>Lab07.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +140,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lab04_sobel.resx">
       <DependentUpon>Lab04_sobel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab05.resx">
+      <DependentUpon>Lab05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab06.resx">
+      <DependentUpon>Lab06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab07.resx">
+      <DependentUpon>Lab07.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -166,6 +194,8 @@
     </Content>
     <None Include="Resources\gray-circle.jpg" />
     <None Include="Resources\gray-linear.jpg" />
+    <None Include="Resources\webcam-icon.png" />
+    <None Include="Resources\folder-icon.png" />
     <Content Include="vcruntime140.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
