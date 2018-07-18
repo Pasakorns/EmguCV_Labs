@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Emgu.CV;
@@ -12,7 +7,7 @@ using Emgu.CV.Structure;
 
 namespace EmguCV_Labs
 {
-    
+
     public partial class Lab08 : Form
     {
         private static Lab08 _instance;
