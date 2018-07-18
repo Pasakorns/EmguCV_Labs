@@ -127,6 +127,12 @@
     <Compile Include="Lab07.Designer.cs">
       <DependentUpon>Lab07.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lab08.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab08.Designer.cs">
+      <DependentUpon>Lab08.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lab07.resx">
       <DependentUpon>Lab07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab08.resx">
+      <DependentUpon>Lab08.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
