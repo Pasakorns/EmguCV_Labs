@@ -28,7 +28,7 @@ namespace EmguCV_Labs
         Image<Gray, Byte> blank;
         Image<Gray, Byte> resultImg;
 
-        public Lab07()
+        private Lab07()
         {
             InitializeComponent();
         }
