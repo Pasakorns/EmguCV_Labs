@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmguCV_Labs", "EmguCV_Labs\EmguCV_Labs.csproj", "{144E8470-DDB6-4BA1-A62F-29D69393ACA2}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{BF88FB27-197F-4F9C-959F-7C4C1309C47F}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EmguLabsInstaller", "Setup\Setup.vdproj", "{BF88FB27-197F-4F9C-959F-7C4C1309C47F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
