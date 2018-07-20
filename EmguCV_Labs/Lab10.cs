@@ -40,12 +40,14 @@ namespace EmguCV_Labs
         Image<Bgr, byte> frameShow;
 
         List<PointF> path;
+        CvTracks tracker;
+        CvBlobs mBlobs;
 
+        #region Control panel
         private Lab10()
         {
             InitializeComponent();
         }
-
         private void Lab10_Load(object sender, EventArgs e)
         {
             foreach (var item in Enum.GetValues(typeof(Emgu.CV.CvEnum.ThresholdType)))
@@ -58,9 +60,9 @@ namespace EmguCV_Labs
             frameGray = new Image<Gray, byte>(new Size(FRAME_WIDTH, FRAME_HEIGHT));
             frameShow = new Image<Bgr, byte>(new Size(FRAME_WIDTH, FRAME_HEIGHT));
             path = new List<PointF>(50);
-
+            tracker = new CvTracks();
+            mBlobs = new CvBlobs();
         }
-
         private void openVideoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -71,7 +73,8 @@ namespace EmguCV_Labs
                     video = new VideoCapture(ofd.FileName);
                     Mat m = new Mat();
                     video.Read(m);
-                    imbInput.Image = new Image<Bgr, byte>(m.Bitmap).Resize(FRAME_WIDTH, FRAME_HEIGHT, Emgu.CV.CvEnum.Inter.Linear); 
+                    frameRgb = new Image<Bgr, byte>(m.Bitmap).Resize(FRAME_WIDTH, FRAME_HEIGHT, Emgu.CV.CvEnum.Inter.Linear);
+                    imbInput.Image = frameRgb;
                 }
                 catch (Exception ex)
                 {
@@ -79,18 +82,18 @@ namespace EmguCV_Labs
                 }
             }
         }
-
         private void playToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            playing = true;
-            PlayVideo();
+            if (!playing)
+            {
+                playing = true;
+                PlayVideo();
+            }
         }
-
         private void pauseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             playing = false;
         }
-
         private void stopToolStripMenuItem_Click(object sender, EventArgs e)
         {
             playing = false;
@@ -99,12 +102,25 @@ namespace EmguCV_Labs
                 ///
             }
         }
-
         private void trbThreshold_Scroll(object sender, EventArgs e)
         {
             imbOutput.Image = ImageFillter(frameRgb);
         }
+        private void cboThresType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            imbOutput.Image = ImageFillter(frameRgb);
+        }
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            tracking = true;
+        }
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            tracking = false;
+        }
+        #endregion
 
+        #region program's functions
         /// <summary>
         /// Fillering image
         /// </summary>
@@ -131,13 +147,18 @@ namespace EmguCV_Labs
             {
                 try
                 {
-                    double fps = video.GetCaptureProperty(Emgu.CV.CvEnum.CapProp.Fps);
-
+                    long spf = Convert.ToInt64(1000/video.GetCaptureProperty(Emgu.CV.CvEnum.CapProp.Fps));
+                    var times = System.Diagnostics.Stopwatch.StartNew();
+                    
                     while (video.QueryFrame() != null && playing)
                     {
+                        times.Restart();
+                        var timer = StopWatch(times, spf);
+
                         Image<Bgr, Byte> buffFrame = new Image<Bgr, byte>(video.QueryFrame().Bitmap).Resize(FRAME_WIDTH, 
                                                                                                             FRAME_HEIGHT,
                                                                                                             Emgu.CV.CvEnum.Inter.Linear);
+                        
                         imbInput.Image = buffFrame;
                         buffFrame.CopyTo(frameRgb);
 
@@ -150,17 +171,19 @@ namespace EmguCV_Labs
                         if (tracking)
                         {
                             PathUpdate(FindObject(frameGray));
+                            mBlobs = FindObject(frameGray);
+                            UpdateTracker(mBlobs);
                             DrawPath(ref frameShow);
                         }
                         else
                         {
 
                         }
-                       
                         #endregion
 
                         imbOutput.Image = frameShow;
-                        await Task.Delay(Convert.ToInt32(1000/fps));
+                        await Task.WhenAll(timer);
+                        times.Stop();
                     }
 
                     if (video.QueryFrame() == null)
@@ -173,13 +196,14 @@ namespace EmguCV_Labs
                 }
                 catch (Exception)
                 {
+                    MessageBox.Show("QuaryFrame");
                     return;
                 }
             }
 
         }
 
-        private PointF FindObject(Image<Gray, byte> grayImg)
+        private CvBlobs FindObject(Image<Gray, byte> grayImg)
         {
             if (grayImg != null)
             {
@@ -206,19 +230,19 @@ namespace EmguCV_Labs
                     }
                 }
 
-                return blobs[1].Centroid;
+                return blobs;
             }
 
-            return default(PointF);
+            return null;
         }
 
-        private void PathUpdate(PointF point)
+        private void PathUpdate(CvBlobs blobs)
         {
             if (path.Count > 50)
             {
                 path.RemoveAt(0);
             }
-            path.Add(point);
+            path.Add(blobs[1].Centroid);
 
             if (path.Count > 0 && path != null)
             {
@@ -245,14 +269,40 @@ namespace EmguCV_Labs
             }
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private void UpdateTracker(CvBlobs blobs)
         {
-            tracking = true;
+            if (blobs != null)
+            {
+                //UNDONE: need exception
+                tracker.Update(blobs, 50, 3, 10);
+            }
+
+            var buff = new Image<Gray, byte>(new Size(FRAME_WIDTH, FRAME_HEIGHT));
+
+            foreach (var item in tracker)
+            {
+                buff.Draw(item.Value.BoundingBox, new Gray(255), 2);
+                
+            }
+
+            frameShow.SetValue(new Bgr(0, 0, 255), buff);
         }
 
-        private void btnStop_Click(object sender, EventArgs e)
+        private async Task StopWatch(System.Diagnostics.Stopwatch elaps, long sp)
         {
-            tracking = false;
+            while (true)
+            {
+                if (elaps.ElapsedMilliseconds >= sp)
+                {
+                    break;
+                }
+                else
+                {
+                    await Task.Delay(1);
+                }
+            }
         }
+        #endregion
+
     }
 }

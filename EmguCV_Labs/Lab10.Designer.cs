@@ -36,10 +36,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblArea = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblFoundNo = new System.Windows.Forms.Label();
+            this.lblSpeed = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cboBlobId = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
@@ -78,10 +76,8 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.lblArea);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.lblFoundNo);
+            this.groupBox3.Controls.Add(this.lblSpeed);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.cboBlobId);
             this.groupBox3.Location = new System.Drawing.Point(503, 277);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(160, 186);
@@ -143,40 +139,23 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Area :";
             // 
-            // lblFoundNo
+            // lblSpeed
             // 
-            this.lblFoundNo.AutoSize = true;
-            this.lblFoundNo.Location = new System.Drawing.Point(80, 31);
-            this.lblFoundNo.Name = "lblFoundNo";
-            this.lblFoundNo.Size = new System.Drawing.Size(16, 13);
-            this.lblFoundNo.TabIndex = 14;
-            this.lblFoundNo.Text = "---";
+            this.lblSpeed.AutoSize = true;
+            this.lblSpeed.Location = new System.Drawing.Point(80, 31);
+            this.lblSpeed.Name = "lblSpeed";
+            this.lblSpeed.Size = new System.Drawing.Size(16, 13);
+            this.lblSpeed.TabIndex = 14;
+            this.lblSpeed.Text = "---";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(20, 31);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Found :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 58);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "ID :";
-            // 
-            // cboBlobId
-            // 
-            this.cboBlobId.FormattingEnabled = true;
-            this.cboBlobId.Location = new System.Drawing.Point(83, 55);
-            this.cboBlobId.Name = "cboBlobId";
-            this.cboBlobId.Size = new System.Drawing.Size(58, 21);
-            this.cboBlobId.TabIndex = 7;
+            this.label6.Text = "Speed :";
             // 
             // groupBox2
             // 
@@ -286,6 +265,7 @@
             this.cboThresType.Name = "cboThresType";
             this.cboThresType.Size = new System.Drawing.Size(64, 21);
             this.cboThresType.TabIndex = 6;
+            this.cboThresType.SelectedIndexChanged += new System.EventHandler(this.cboThresType_SelectedIndexChanged);
             // 
             // imbOutput
             // 
@@ -330,7 +310,7 @@
             // openVideoToolStripMenuItem
             // 
             this.openVideoToolStripMenuItem.Name = "openVideoToolStripMenuItem";
-            this.openVideoToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.openVideoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openVideoToolStripMenuItem.Text = "open video";
             this.openVideoToolStripMenuItem.Click += new System.EventHandler(this.openVideoToolStripMenuItem_Click);
             // 
@@ -396,10 +376,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblArea;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblFoundNo;
+        private System.Windows.Forms.Label lblSpeed;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cboBlobId;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnStart;
