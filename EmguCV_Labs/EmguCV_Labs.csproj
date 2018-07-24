@@ -222,6 +222,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ball.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="concrt140.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -238,6 +241,7 @@
     <None Include="Resources\gray-linear.jpg" />
     <None Include="Resources\webcam-icon.png" />
     <None Include="Resources\folder-icon.png" />
+    <None Include="Resources\ball.mp4" />
     <Content Include="vcruntime140.dll" />
   </ItemGroup>
   <ItemGroup>

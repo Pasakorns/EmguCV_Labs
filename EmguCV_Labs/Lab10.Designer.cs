@@ -30,17 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblCtY = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblCtX = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.lblArea = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.nudScale = new System.Windows.Forms.NumericUpDown();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblDistance = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.lblSpeed = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnStop = new System.Windows.Forms.Button();
-            this.btnStart = new System.Windows.Forms.Button();
+            this.nudMaxArea = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.nudMinArea = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,9 +60,13 @@
             this.openVideoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudScale)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxArea)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinArea)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trbDilate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbErode)).BeginInit();
@@ -70,12 +78,16 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lblCtY);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.lblCtX);
+            this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.lblArea);
+            this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.nudScale);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.lblTime);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.lblDistance);
+            this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.lblSpeed);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(503, 277);
@@ -85,64 +97,97 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Result";
             // 
-            // lblCtY
-            // 
-            this.lblCtY.AutoSize = true;
-            this.lblCtY.Location = new System.Drawing.Point(80, 139);
-            this.lblCtY.Name = "lblCtY";
-            this.lblCtY.Size = new System.Drawing.Size(16, 13);
-            this.lblCtY.TabIndex = 20;
-            this.lblCtY.Text = "---";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(26, 139);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "CT-Y :";
-            // 
-            // lblCtX
-            // 
-            this.lblCtX.AutoSize = true;
-            this.lblCtX.Location = new System.Drawing.Point(80, 114);
-            this.lblCtX.Name = "lblCtX";
-            this.lblCtX.Size = new System.Drawing.Size(16, 13);
-            this.lblCtX.TabIndex = 18;
-            this.lblCtX.Text = "---";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(26, 114);
+            this.label9.Location = new System.Drawing.Point(109, 110);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "CT-X :";
+            this.label9.Size = new System.Drawing.Size(28, 13);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "pixel";
             // 
-            // lblArea
+            // label8
             // 
-            this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(80, 90);
-            this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(16, 13);
-            this.lblArea.TabIndex = 16;
-            this.lblArea.Text = "---";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(111, 134);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(24, 13);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "sec";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 90);
+            this.label7.Location = new System.Drawing.Point(109, 88);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Area :";
+            this.label7.Size = new System.Drawing.Size(45, 13);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "mm/sec";
+            // 
+            // nudScale
+            // 
+            this.nudScale.DecimalPlaces = 2;
+            this.nudScale.Increment = new decimal(new int[] {
+            2,
+            0,
+            0,
+            131072});
+            this.nudScale.Location = new System.Drawing.Point(57, 30);
+            this.nudScale.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudScale.Name = "nudScale";
+            this.nudScale.Size = new System.Drawing.Size(52, 20);
+            this.nudScale.TabIndex = 26;
+            this.nudScale.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            65536});
+            this.nudScale.ValueChanged += new System.EventHandler(this.nudScale_ValueChanged);
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(60, 134);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(16, 13);
+            this.lblTime.TabIndex = 24;
+            this.lblTime.Text = "---";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 134);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Time :";
+            // 
+            // lblDistance
+            // 
+            this.lblDistance.AutoSize = true;
+            this.lblDistance.Location = new System.Drawing.Point(60, 110);
+            this.lblDistance.Name = "lblDistance";
+            this.lblDistance.Size = new System.Drawing.Size(16, 13);
+            this.lblDistance.TabIndex = 22;
+            this.lblDistance.Text = "---";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(4, 110);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Distance :";
             // 
             // lblSpeed
             // 
             this.lblSpeed.AutoSize = true;
-            this.lblSpeed.Location = new System.Drawing.Point(80, 31);
+            this.lblSpeed.Location = new System.Drawing.Point(60, 88);
             this.lblSpeed.Name = "lblSpeed";
             this.lblSpeed.Size = new System.Drawing.Size(16, 13);
             this.lblSpeed.TabIndex = 14;
@@ -151,7 +196,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 31);
+            this.label6.Location = new System.Drawing.Point(15, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 13;
@@ -159,34 +204,75 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnStop);
-            this.groupBox2.Controls.Add(this.btnStart);
+            this.groupBox2.Controls.Add(this.nudMaxArea);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.nudMinArea);
             this.groupBox2.Location = new System.Drawing.Point(343, 277);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(154, 186);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Detection";
+            this.groupBox2.Text = "Blob fillter";
             // 
-            // btnStop
+            // nudMaxArea
             // 
-            this.btnStop.Location = new System.Drawing.Point(40, 82);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(75, 23);
-            this.btnStop.TabIndex = 6;
-            this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            this.nudMaxArea.Location = new System.Drawing.Point(77, 67);
+            this.nudMaxArea.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.nudMaxArea.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudMaxArea.Name = "nudMaxArea";
+            this.nudMaxArea.Size = new System.Drawing.Size(61, 20);
+            this.nudMaxArea.TabIndex = 31;
+            this.nudMaxArea.Value = new decimal(new int[] {
+            800,
+            0,
+            0,
+            0});
+            this.nudMaxArea.ValueChanged += new System.EventHandler(this.nudMaxArea_ValueChanged);
             // 
-            // btnStart
+            // label12
             // 
-            this.btnStart.Location = new System.Drawing.Point(41, 32);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 5;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 69);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 13);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "Max area:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(20, 34);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Min area:";
+            // 
+            // nudMinArea
+            // 
+            this.nudMinArea.Location = new System.Drawing.Point(77, 34);
+            this.nudMinArea.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.nudMinArea.Name = "nudMinArea";
+            this.nudMinArea.Size = new System.Drawing.Size(61, 20);
+            this.nudMinArea.TabIndex = 28;
+            this.nudMinArea.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudMinArea.ValueChanged += new System.EventHandler(this.nudMaxArea_ValueChanged);
             // 
             // groupBox1
             // 
@@ -228,6 +314,7 @@
             this.trbDilate.Name = "trbDilate";
             this.trbDilate.Size = new System.Drawing.Size(229, 45);
             this.trbDilate.TabIndex = 10;
+            this.trbDilate.Value = 8;
             this.trbDilate.Scroll += new System.EventHandler(this.trbThreshold_Scroll);
             // 
             // trbErode
@@ -255,7 +342,7 @@
             this.trbThreshold.Size = new System.Drawing.Size(180, 45);
             this.trbThreshold.TabIndex = 7;
             this.trbThreshold.TickFrequency = 64;
-            this.trbThreshold.Value = 122;
+            this.trbThreshold.Value = 200;
             this.trbThreshold.Scroll += new System.EventHandler(this.trbThreshold_Scroll);
             // 
             // cboThresType
@@ -291,8 +378,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.playToolStripMenuItem,
-            this.pauseToolStripMenuItem,
-            this.stopToolStripMenuItem});
+            this.pauseToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(673, 24);
@@ -329,12 +415,23 @@
             this.pauseToolStripMenuItem.Text = "pause";
             this.pauseToolStripMenuItem.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
             // 
-            // stopToolStripMenuItem
+            // label4
             // 
-            this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
-            this.stopToolStripMenuItem.Text = "stop";
-            this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(2, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Cal scale :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(109, 32);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 13);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "mm/pixel";
             // 
             // Lab10
             // 
@@ -352,7 +449,11 @@
             this.Load += new System.EventHandler(this.Lab10_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudScale)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxArea)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinArea)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trbDilate)).EndInit();
@@ -370,17 +471,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label lblCtY;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lblCtX;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblArea;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblSpeed;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -396,6 +489,19 @@
         private System.Windows.Forms.ToolStripMenuItem openVideoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pauseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stopToolStripMenuItem;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblDistance;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown nudScale;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown nudMaxArea;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown nudMinArea;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label4;
     }
 }
