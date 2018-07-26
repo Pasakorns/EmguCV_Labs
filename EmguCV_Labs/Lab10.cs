@@ -110,7 +110,6 @@ namespace EmguCV_Labs
         #endregion
 
         #region program's functions
-        
         private Image<Gray, Byte> ImageFillter(Image<Bgr, byte> sourceImage)
         {
             if (sourceImage != null)
@@ -126,7 +125,6 @@ namespace EmguCV_Labs
                 return null;
             }
         }
-
         private async void PlayVideo()
         {
             if (video != null)
@@ -183,7 +181,6 @@ namespace EmguCV_Labs
                 }
             }
         }
-
         private CvBlobs FindObject(Image<Gray, byte> inputImg, int minArea, int maxArea)
         {
             if (inputImg != null)
@@ -207,7 +204,6 @@ namespace EmguCV_Labs
             }
             return null;
         }
-
         private void UpdateTracker(CvTracks blobsTracker, CvBlobs blobs, double thDistance, uint thInactive, uint thActive)
         {
             if (blobs != null && blobs.Count > 0)
@@ -228,7 +224,6 @@ namespace EmguCV_Labs
             frameShow.SetValue(new Bgr(0, 0, 255), buff);
             /////////////////////
         }
-
         private Movement SetMovement(CvTracks trackedBlobs, CvBlobs inputBolbs, DateTime now)
         {
             Movement path = new Movement();
@@ -243,7 +238,6 @@ namespace EmguCV_Labs
             }
             return path;
         }
-
         private void PathUpdateV2(Movement nowPos)
         {
 
@@ -253,17 +247,11 @@ namespace EmguCV_Labs
             }
             pathV2.Add(nowPos);
         }
-
         private void DrawPath(ref Image<Bgr, byte> outImg)
         {
             if (pathV2.Count > 1)
             {
                 var buff = new Image<Gray, byte>(new Size(FRAME_WIDTH, FRAME_HEIGHT));
-
-                //foreach (var item in pathV2)
-                //{
-                //    buff.Draw(new CircleF(item.position, 0), new Gray(255), 1);
-                //}
 
                 for (int i = 0; i < pathV2.Count - 1; i++)
                 {
@@ -273,7 +261,6 @@ namespace EmguCV_Labs
                 outImg.SetValue(new Bgr(255, 255, 0), buff);
             }
         }
-
         private async Task StopWatch(System.Diagnostics.Stopwatch elaps, long sp)
         {
             while (true)
@@ -288,7 +275,6 @@ namespace EmguCV_Labs
                 }
             }
         }
-
         private async Task SpeedCalculate(List<Movement> path)
         {
             if (path.Count > 5 && path != null)
