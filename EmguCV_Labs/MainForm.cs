@@ -59,5 +59,10 @@ namespace EmguCV_Labs
         {
             Lab10.Instance.ShowDialog();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Lab11.Instance.ShowDialog();
+        }
     }
 }
